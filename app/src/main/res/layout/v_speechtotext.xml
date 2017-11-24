@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:voiceView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/shape_circular_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chronometer"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#464646"
+                android:text="마이크를 누른 뒤,\n[강퇴 키워드]를 말씀하세요."
+                android:textSize="16dp"
+                android:lineSpacingMultiplier="1.5"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/delete"
+                android:layout_toStartOf="@+id/delete" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/delete_img"
+                android:clickable="true"
+                android:onClick="cancel_clicked"/>
+        </RelativeLayout>
+
+        <com.example.jyn.hearhere.VoiceLineView
+            android:id="@+id/voicLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            voiceView:fineness="three"
+            voiceView:lineSpeed="90"
+            voiceView:maxVolume="200"
+            voiceView:middleLine="@android:color/transparent"
+            voiceView:middleLineHeight="1dp"
+            voiceView:rectSpace="2dp"
+            voiceView:rectWidth="5dp"
+            voiceView:sensibility="four"
+            voiceView:viewMode="line"
+            voiceView:voiceLine="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_above="@+id/keywords"
+            android:text="[강퇴 키워드]"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="#282828"/>
+
+        <TextView
+            android:id="@+id/keywords"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_above="@+id/mic_on_layout"
+            android:text="'스파이더맨 빠염'"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#d13b00"/>
+
+        <RelativeLayout
+            android:id="@+id/mic_on_layout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="mic_on_clicked">
+            <ImageView
+                android:id="@+id/mic_on_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/mic_sst_1"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/mic_on_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/mic_sst_2"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/mic_on_3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/mic_sst_3"/>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/mic_on_4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/mic_sst_4"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

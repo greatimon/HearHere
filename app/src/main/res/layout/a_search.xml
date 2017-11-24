@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--상단 액션바-->
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#FFB300"
+        android:gravity="center|start">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="backClicked"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_bracket"
+            android:clickable="true"/>
+        <EditText
+            android:id="@+id/search_keyword"
+            android:background="@drawable/edittext_underline_delete"
+            android:visibility="visible"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:hint="검색어를 입력하세요."
+            android:textColorHint="#fedd9e"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/ini_editText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="17dp"
+            android:clickable="true"
+            android:onClick="ini_editText"
+            android:src="@drawable/cancel_none_activated"/>
+    </LinearLayout>
+    <!--상단 액션바-->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#ffc107"
+            app:tabIndicatorHeight="2dp"
+            app:tabTextColor="#c3c3c3"
+            app:tabSelectedTextColor="#ffc107"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tab"
+            android:background="@drawable/shadow_tablayout"
+            android:id="@+id/view" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

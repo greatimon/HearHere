@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#555"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/out_for_host"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        tools:text="방송을 종료하시겠습니까?"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/out_for_guest"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="방송을 나가시겠습니까?"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="예"
+        android:background="@drawable/btn_out_yes"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:onClick="out_yes_clicked"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/normal_btn_rounded"
+        android:gravity="center"
+        android:text="아니오"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:onClick="out_no_clicked"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jyn.hearhere.f_cast">
+
+    <RelativeLayout
+        android:id="@+id/no_cast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            tools:visibility="visible"
+            android:id="@+id/comment"
+            android:layout_above="@+id/create_broadCast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="라이브로 당신의 목소리를 들려주세요~!"
+            android:textColor="#2d2d2d"/>
+        <Button
+            tools:visibility="visible"
+            android:id="@+id/create_broadCast"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/subtracts_fan_rounded"
+            android:text="방송하기"
+            android:textSize="14dp"
+            android:textColor="#fff"/>
+        <ListView
+            tools:visibility="visible"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:divider="@null"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true">
+        </ListView>
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

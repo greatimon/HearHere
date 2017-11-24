@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--상단 액션바-->
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:background="#FFB300"
+        android:gravity="center|start">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="backClicked"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_bracket"
+            android:clickable="true"/>
+        <TextView
+            android:text="공지사항"
+            android:id="@+id/myID"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp" />
+    </LinearLayout>
+    <!--상단 액션바-->
+
+    <!--공지사항 목록-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eff2eb">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!--5-->
+            <LinearLayout
+                android:id="@+id/notice_5_title"
+                android:onClick="on_Notice_5_Clicked"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fafcfc"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/bracket_5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/right_bracket" />
+                <TextView
+                    android:id="@+id/title_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="로딩화면 구현"
+                    android:textColor="#BB000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/date_5"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2017.04.21"
+                    android:textColor="#BB000000"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notice_5_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:id="@+id/content_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="최초 실행 시, 앱 로고가 약 2초동안 화면 전면에 보인 후 앱이 시작됩니다\n - 자동 로그인 여부와 관계없이 나타납니다"
+                    android:textColor="#AA000000"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--4-->
+            <LinearLayout
+                android:id="@+id/notice_4_title"
+                android:onClick="on_Notice_4_Clicked"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fafcfc"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/bracket_4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/right_bracket" />
+                <TextView
+                    android:id="@+id/title_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="첨부 사진 크게 보기 기능 추가"
+                    android:textColor="#BB000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/date_4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2017.04.17"
+                    android:textColor="#BB000000"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notice_4_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:id="@+id/content_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="글 상세보기 화면에서 첨부된 사진을 누르면, 확대된 이미지를 확인할 수 있습니다\n - 첨부된 사진의 품질이 낮을 경우, 사진이 작게 보일 수 있습니다"
+                    android:textColor="#AA000000"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--3-->
+            <LinearLayout
+                android:id="@+id/notice_3_title"
+                android:onClick="on_Notice_3_Clicked"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fafcfc"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/bracket_3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/right_bracket" />
+                <TextView
+                    android:id="@+id/title_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="글 목록보기 하단_ 배너 광고 구현"
+                    android:textColor="#BB000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/date_3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2017.04.18"
+                    android:textColor="#BB000000"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notice_3_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:id="@+id/content_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="글 목록보기 화면 하단에 배너 광고가 추가 되었습니다.\n - 각종 상업성 / 공익성 광고들이 개재됩니다"
+                    android:textColor="#AA000000"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--2-->
+            <LinearLayout
+                android:onClick="on_Notice_2_Clicked"
+                android:clickable="true"
+                android:id="@+id/notice_2_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fafcfc"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/bracket_2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/right_bracket" />
+                <TextView
+                    android:id="@+id/title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="회원 등급 업데이트"
+                    android:textColor="#BB000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/date_2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2017.04.18"
+                    android:textColor="#BB000000"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notice_2_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/content_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="`설정` 화면에서,\n회원등급에 대한 안내 / 현재 나의 회원등급 확인이 가능합니다.\n\n - 회원 등급은 Grade Count를 기반으로 결정됩니다\n   * Grade Count(GC) = 총 추천수 - 총 비추천수\n다음 등급까지 필요한 GC는 `설정` 화면 상단 부분 `For Next Grade`에서 확인이 가능합니다\n\n자세한 회원등급 안내는 `설정` 화면의 `등급 안내 보기`를 참고해주세요"
+                    android:textColor="#AA000000"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--1-->
+            <LinearLayout
+                android:id="@+id/notice_1_title"
+                android:onClick="on_Notice_1_Clicked"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="#fafcfc"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/bracket_1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/right_bracket" />
+                <TextView
+                    android:id="@+id/title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="지도 구현 안내"
+                    android:textColor="#BB000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/date_1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2017.04.21"
+                    android:textColor="#BB000000"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/notice_1_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:id="@+id/content_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="글 작성 시, 구글맵을 통하여 장소 정보를 추가할 수 있습니다.\n\n - 최초, 현재 내 위치에 자동으로 핀이 마킹됩니다\n - 상단의 주소입력창을 통해 주소 검색이 가능합니다\n   검색된 지역에 자동으로 핀이 마킹됩니다\n - 추가하고자 하는 위치를 구글맵 상에서 길게 눌러보세요\n   해당 위치에 핀을 설정할 수 있습니다\n - 하나의 위치정보만 추가가 가능합니다\n\n 추가하고자 하는 장소에 핀이 마킹 됐다면, 주소검색창 밑 `첨부` 버튼을 눌러주세요"
+                    android:textColor="#AA000000"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

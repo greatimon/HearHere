@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFB300"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:text="신고하기"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#d1d1d1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:text="음란성"
+        android:textColor="#777777"
+        android:textSize="15dp"
+        android:onClick="obscenity_clicked"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#d1d1d1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:text="도용 및 사칭"
+        android:textColor="#777777"
+        android:textSize="15dp"
+        android:onClick="impersonation_clicked"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#d1d1d1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:text="비방"
+        android:textColor="#777777"
+        android:textSize="15dp"
+        android:onClick="calumny_clicked"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="#d1d1d1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:gravity="center|start"
+        android:paddingLeft="15dp"
+        android:text="기타"
+        android:textColor="#777777"
+        android:textSize="15dp"
+        android:onClick="etc_clicked"/>
+</LinearLayout>

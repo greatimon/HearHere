@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="220dp"
+    android:layout_height="300dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/dialog_select_pick_img_method_activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="35dp"
+        android:clickable="true"
+        android:onClick="pick_from_album"
+        android:src="@drawable/gallery"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:background="#9b9b9b"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="35dp"
+        android:clickable="true"
+        android:onClick="take_photo"
+        android:src="@drawable/camera"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:background="#FFB300"-->
+        <!--android:gravity="center|start"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:text="프로필 사진"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="15dp" />-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.7dp"-->
+        <!--android:background="#d1d1d1" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:background="#FFFFFF"-->
+        <!--android:gravity="center|start"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:text="앨범에서 사진 선택"-->
+        <!--android:textColor="#777777"-->
+        <!--android:textSize="15dp"-->
+        <!--android:onClick="pick_from_album"/>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.7dp"-->
+        <!--android:background="#d1d1d1" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:background="#FFFFFF"-->
+        <!--android:gravity="center|start"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:text="사진 촬영"-->
+        <!--android:textColor="#777777"-->
+        <!--android:textSize="15dp"-->
+        <!--android:onClick="take_photo"/>-->
+
+</LinearLayout>

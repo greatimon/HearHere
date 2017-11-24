@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jyn.hearhere">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front.autofocus"  android:required="false"/>
+
+    <supports-screens android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true" />
+
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        // 메인_로그인 전
+        <activity
+            android:name=".a_main_before_login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        // 카카오톡 로그인 연결
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        // 페이스북 로그인 연결
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        // 이메일 로그인/가입하기
+        <activity
+            android:name=".a_email_login"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 회원가입
+        <activity
+            android:name=".a_join"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 회원가입 - 이메일 추가 입력
+        <activity
+            android:name=".a_additional_request_info"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 비밀번호 찾기
+        <activity
+            android:name=".a_find_pw"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+
+        // 메인_로그인 후
+        <activity
+            android:name=".a_main_after_login"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 프로필 사진 크게 보기
+        <activity
+            android:name=".a_original_profile_img"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // send_img 크게 보기
+        <activity
+            android:name=".a_send_img"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 검색 액티비티
+        <activity
+            android:name=".a_search"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 알림 액티비티
+        <activity
+            android:name=".a_noti"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 알림 설정 액티비티
+        <activity
+            android:name=".a_setting_noti"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 프로필
+        <activity
+            android:name=".a_profile"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <!--<intent-filter>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        </activity>
+
+        // 프로필 사진 변경 방법 선택
+        <activity
+            android:name=".v_select_pick_img_mothod"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 프로필 이미지 프리뷰, 얼굴인식 액티비티
+        <activity
+            android:name=".a_face_check"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 카메라_ OpenCV - 가로모드 고정
+        <activity
+            android:name=".a_camera_opencv"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false">
+        </activity>
+
+        // 공지사항
+        <activity
+            android:name=".a_notice"
+            android:screenOrientation="portrait"
+            android:exported="false">
+        </activity>
+
+        // 생방송 준비
+        <activity
+            android:name=".a_create_room"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 방송 이미지 미리보기
+        <activity
+            android:name=".a_preview_broadcast_img"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 온에어(채팅방)
+        <activity
+            android:name=".a_room"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 프로필 정보(View)
+        <activity
+            android:name=".v_profile"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 게스트 리스트 보기(BJ 전용)
+        <activity
+            android:name=".v_show_guests"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // FAN 삭제 확인
+        <activity
+            android:name=".v_subtract_FAN_confirm"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // FAN 삭제 확인
+        <activity
+            android:name=".v_SpeechToText"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 강제퇴장됨을 확인
+        <activity
+            android:name=".v_get_out"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 강제퇴장 시키기 컨펌
+        <activity
+            android:name=".v_red_card_confirm"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 강퇴유저라 방 다시 못들어감을 확인
+        <activity
+            android:name=".v_you_are_red_user"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 방송 종료 확인하였는데, 이미 종료된 방송일 때 띄우는 액티비티
+        <activity
+            android:name=".v_broadcast_end_already"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 네트워크 끊김(재접속 여부 확인)
+        <activity
+            android:name=".v_network_disconnect"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 신고하기
+        <activity
+            android:name=".v_report"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 방 나가기
+        <activity
+            android:name=".v_out_confirm"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 내 방송 삭제, 컨펌 액티비티
+        <activity
+            android:name=".v_delete_cast_confirm"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        // 방송종료로 인한 확인 액티비티
+        <activity
+            android:name=".v_end_broadcast"
+            android:theme="@android:style/Theme.Dialog"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+<!---->
+
+        // 스트리밍 서비스
+        <service android:name="io.antmedia.android.broadcaster.LiveVideoBroadcaster" />
+
+        // FCM
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

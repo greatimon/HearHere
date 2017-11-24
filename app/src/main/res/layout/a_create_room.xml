@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:background="#fbba3c">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="backClicked"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/cancel" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:padding="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:paddingRight="14dp"
+            android:text="생방송 준비"
+            android:textColor="#fbfbfb"
+            android:textSize="22dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:maxHeight="65dp"
+        android:gravity="start"
+        android:background="@null"
+        android:paddingTop="20dp"
+        android:paddingLeft="15dp"
+        android:hint="방송 이름을 3자이상 입력해주세요."
+        android:textColorHint="#a1a1a1"
+        android:textColor="#434546"
+        android:textSize="16dp"
+        android:maxLength="20"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="end">
+        <TextView
+            android:id="@+id/title_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/20"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"/>
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="인사말을 입력해주세요.\n\n청취자가 입장할때마다, 자동으로 채팅이 전달됩니다"
+        android:inputType="textMultiLine"
+        android:maxHeight="100dp"
+        android:maxLength="100"
+        android:maxLines="3"
+        android:minLines="1"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:textColor="#434546"
+        android:textColorHint="#a1a1a1"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="end">
+        <TextView
+            android:id="@+id/comment_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/100"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/broadCast_img"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:clickable="true"
+            android:onClick="modi_broadCast_img"
+            android:padding="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/modi_broadcast_img2" />
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:src="@drawable/delete_img"
+            android:onClick="delete_img_Clicked"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:clickable="true">
+
+        <Switch
+            android:id="@+id/choose_save_switch"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="20dp"
+            android:checked="false"
+            android:switchPadding="20dp"
+            android:textSize="18dp"
+            android:textColor="#c4c4c4"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/choose_save_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:text="종료 후, 방송 저장하기"
+            android:textColor="#c4c4c4"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFA000"
+        android:text="생방송 시작"
+        android:textColor="#fbfbfb"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:clickable="true"
+        android:onClick="on_air_clicked"/>
+
+</LinearLayout>

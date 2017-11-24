@@ -1,0 +1,74 @@
+    apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.example.jyn.hearhere"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode true
+    }
+
+
+}
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        compile 'com.android.support:appcompat-v7:25.3.1'
+        compile 'com.android.support:recyclerview-v7:25.3.1'
+        // 머터리얼 디자인
+        compile 'com.android.support:design:25.3.1'
+        compile 'com.android.support.constraint:constraint-layout:1.0.2'
+        compile 'com.android.support:support-v4:25.3.1'
+        compile 'com.pnikosis:materialish-progress:1.7'
+        // 글라이드
+        compile 'com.github.bumptech.glide:glide:3.7.0'
+        annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
+        compile 'jp.wasabeef:glide-transformations:2.0.2'
+        compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+        // Ted 퍼미션(권한관련 라이브러리)
+        compile 'gun0912.ted:tedpermission:1.0.2'
+        // live BroadCast 모듈
+        compile project(path: ':liveVideoBroadcasterSDK')
+        // exoplayer
+        compile 'com.google.android.exoplayer:exoplayer:r2.3.1'
+        // VLC player
+        compile 'de.mrmaffen:vlc-android-sdk:2.0.6'
+        // 카카오톡 로그인
+        compile group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+        // 카카오톡 SDK
+        compile group: 'com.kakao.sdk', name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+        // 페이스북 SDK
+        compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+        // FCM
+        compile 'com.google.firebase:firebase-core:10.0.1'
+        compile 'com.google.firebase:firebase-messaging:10.0.1'
+        // 포토뷰
+        compile 'com.commit451:PhotoView:1.2.4'
+        // 레트로핏 관련
+        compile 'com.google.code.gson:gson:2.7'
+        compile 'com.squareup.retrofit2:retrofit:2.1.0'
+        compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+        // 피카소
+        compile 'com.squareup.picasso:picasso:2.3.3'
+        testCompile 'junit:junit:4.12'
+        compile project(':openCVLibrary320')
+    }
+
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">HearHere</string>
+    <string name="sample1">Hello~! Friends~!</string>
+    <string name="sample2"><i>Hello~!</i><b>Android~!</b></string>
+    <string name="sample3">Name : %1$s, Score : %2$d</string>
+
+    <string name="nav_menu_0">홈</string>
+    <string name="nav_menu_1">프로필</string>
+    <string name="nav_menu_2">알림설정</string>
+    <string name="nav_menu_3">로그아웃</string>
+    <string name="nav_menu_4">공지사항</string>
+    <string name="nav_menu_5">고객문의</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_1_txtV">Live 탭 리스트뷰 구현</string>
+    <string name="date_1_txtV">2017.06.20</string>
+    <string name="content_1_txtV">
+        - 주요 레이아웃들 작업
+        \n- 액티비티간 전환
+    </string>
+
+    <string name="title_2_txtV">회원가입 및 이메일 로그인 구현</string>
+    <string name="date_2_txtV">2017.06.22</string>
+    <string name="content_2_txtV">
+        - HttpURLConnection 이용
+        \n- 이메일 중복 검사 및 각 EditText뷰 유효성 검사
+    </string>
+
+    <string name="title_3_txtV">다중 채팅/ 네비게이션 드로어 보완</string>
+    <string name="date_3_txtV">2017.06.26</string>
+    <string name="content_3_txtV">
+        - 방 구별 처리
+        \n- 방송 종료 후, 게스트들에게 방종료 팝업 알림, 5분 뒤 자동으로 액티비티 이동
+        \n- 네비게이션 오픈 시, 사용자의 닉네임 로드
+    </string>
+
+    <string name="title_4_txtV">이미지 업로드 및 DB연동 완료</string>
+    <string name="date_4_txtV">2017.06.29</string>
+    <string name="content_4_txtV">
+        - 프로필 사진 업로드 및 로드
+        \n- 채팅방 배경 이미지 업로드 및 로드
+        \n- 채팅 시, 각 사용자들의 프로필 사진 이미지 로드
+    </string>
+
+    <string name="title_5_txtV">CAST 탭, 채팅 다시보기 구현</string>
+    <string name="date_5_txtV">2017.06.30</string>
+    <string name="content_5_txtV">
+        - 방송 별, 채팅 메시지 다시 확인 가능
+        \n- 방송 시간 계산하여 DB저장 및 방리스트에 방송 시간 표시
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--리스트뷰 아이템 클릭 리스너 전달값 구분자-->
+    <string name="user_no">1</string>
+    <string name="send_img_url">2</string>
+    <string name="send_user_nickName">3</string>
+    <string name="send_user_profile_img_url">4</string>
+</resources>

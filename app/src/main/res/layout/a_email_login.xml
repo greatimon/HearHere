@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/headphone2"
+    android:scaleType="centerCrop"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:alpha="0.4"/>
+
+<LinearLayout
+    android:id="@+id/actionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="13dp"
+            android:src="@drawable/left_bracket"
+            android:scaleType="centerInside"
+            android:onClick="backClicked"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/back"
+            android:paddingLeft="15dp"
+            android:gravity="center|start"
+            android:text="이메일 로그인"
+            android:textColor="#fbfbfb"
+            android:textSize="22dp"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:hint="이메일을 입력하세요."
+        android:inputType="textEmailAddress"
+        android:textSize="16dp"
+        android:textColor="#fbfbfb"
+        android:textColorHint="#999999"/>
+
+    <EditText
+        android:id="@+id/input_pw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="비밀번호를 입력하세요"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColor="#fbfbfb"
+        android:textColorHint="#999999"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:text="로그인"
+        android:textSize="16dp"
+        android:textColor="#fbfbfb"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="login_clicked"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp">-->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="가입하기"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="#fbfbfb"-->
+            <!--android:textStyle="normal"-->
+            <!--android:background="@drawable/w_border_right"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:text="비밀번호 찾기"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="#fbfbfb"-->
+            <!--android:textStyle="normal"/>-->
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="비밀번호가 기억이 안나세요?"
+        android:textSize="14dp"
+        android:textColor="#fbfbfb"
+        android:textStyle="normal"
+        android:clickable="true"
+        android:onClick="find_pw_clicked"/>
+    
+    
+
+</LinearLayout>
+
+</RelativeLayout>

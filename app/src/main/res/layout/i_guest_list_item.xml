@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    tools:layout_width="250dp"
+    android:layout_height="65dp"
+    tools:background="#999"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:gravity="center"
+    android:id="@+id/list_item_container">
+
+    <ImageView
+        android:id="@+id/sender_profile_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="5dp"
+        tools:src="@drawable/test_photo"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/nickName"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        tools:text="그레아티"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:textSize="15dp"
+        android:textColor="#000"/>
+
+    <Button
+        android:visibility="gone"
+        tools:visibility="gone"
+        android:id="@+id/add_FAN"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="+ FAN"
+        android:background="@drawable/plus_fan_rounded_2"
+        android:textColor="#000"
+        android:textSize="13dp"/>
+
+    <Button
+        android:visibility="gone"
+        tools:visibility="gone"
+        android:id="@+id/subtract_FAN"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="MY"
+        android:background="@drawable/subtracts_fan_rounded"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"/>
+
+    <Button
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/force_to_out"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="강퇴"
+        android:background="@drawable/force_to_out_rounded"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"/>
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "185253348657",
+    "firebase_url": "https://hearhere-487ad.firebaseio.com",
+    "project_id": "hearhere-487ad",
+    "storage_bucket": "hearhere-487ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185253348657:android:01364f3a3c464dc9",
+        "android_client_info": {
+          "package_name": "com.example.jyn.hearhere"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185253348657-bb0b5dfkajmomtnsi2m5lbued4or7n75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXIG4ao9K1WgZozTFgcWISfZQUdqA0Z6E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

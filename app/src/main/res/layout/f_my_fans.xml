@@ -1,0 +1,42 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jyn.hearhere.f_my_fans">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            tools:visibility="gone"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="350dp"
+            android:dividerHeight="1dp"
+            android:divider="#d5d5d5"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true">
+        </ListView>
+
+        <TextView
+            tools:visibility="visible"
+            android:id="@+id/no_my_fans"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="250dp"
+            android:text="방송으로 내 FAN을 만드세요~!"
+            android:textSize="16dp"
+            android:textColor="#2d2d2d"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>
